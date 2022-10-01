@@ -5,15 +5,10 @@ import { ButtonList } from "./FeedbackOptions.styled"
 export const FeedbackOptions = ({onLeaveFeedback, options}) => {
     return(
         <ButtonList>
-            <li>
-                <button type="button" onClick={() => {onLeaveFeedback(options[0])}}>Good</button>
-            </li>
-            <li>
-                <button type="button" onClick={() => {onLeaveFeedback(options[1])}}>Neutral</button>
-            </li>
-            <li>
-                <button type="button" onClick={() => {onLeaveFeedback(options[2])}}>Bad</button>
-            </li>
+            {options.map(item => 
+            <li key={item}>
+                <button type="button" onClick={() => {onLeaveFeedback(item)}}>Good</button>
+            </li>)}
         </ButtonList>
     )
 }
