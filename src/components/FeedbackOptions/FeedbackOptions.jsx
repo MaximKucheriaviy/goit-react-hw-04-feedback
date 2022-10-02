@@ -7,7 +7,7 @@ export const FeedbackOptions = ({onLeaveFeedback, options}) => {
         <ButtonList>
             {options.map(item => 
             <li key={item}>
-                <button type="button" onClick={() => {onLeaveFeedback(item)}}>Good</button>
+                <button type="button" onClick={() => {onLeaveFeedback(item)}} style={{textTransform: "capitalize"}}>{item}</button>
             </li>)}
         </ButtonList>
     )
